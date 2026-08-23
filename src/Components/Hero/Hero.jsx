@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import Download from "../buttons/download";
+import Download from "../buttons/Download";
 import HireMe from "../buttons/HireMe";
 import { useTheme } from "../../context/ThemeContext";
 import { FiSun, FiMoon } from "react-icons/fi";
