@@ -144,13 +144,13 @@ function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop Controls */}
-          <div className="hidden sm:flex items-center gap-4">
+          {/* Desktop Controls & Mobile Theme Switcher */}
+          <div className="flex items-center gap-2 sm:gap-4">
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "rgba(250,204,21,0.1)" }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--glass-border)] text-yellow-400 bg-[var(--glass-bg)] transition-colors"
+              className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-[var(--glass-border)] text-yellow-400 bg-[var(--glass-bg)] transition-colors"
               title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
               {isDarkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
@@ -160,7 +160,7 @@ function Navbar() {
               href="#contact"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 20px -5px rgba(250,204,21,0.3)" }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-yellow-400 text-black text-xs font-bold uppercase tracking-wider transition-all"
+              className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-yellow-400 text-black text-xs font-bold uppercase tracking-wider transition-all"
             >
               Hire Me
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,70 +168,7 @@ function Navbar() {
               </svg>
             </motion.a>
           </div>
-
-          {/* Mobile Toggle */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-[var(--glass-bg)] border border-[var(--glass-border)] text-[var(--accent)] text-lg"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <AnimatePresence mode="wait">
-              <motion.span 
-                key={isOpen ? "close" : "open"}
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {isOpen ? "✕" : "☰"}
-              </motion.span>
-            </AnimatePresence>
-          </motion.button>
         </motion.div>
-
-        {/* Mobile Dropdown */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 15, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.95 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="md:hidden mt-3 p-4 rounded-3xl bg-[var(--bg-primary)] opacity-95 backdrop-blur-2xl border border-[var(--glass-border)] shadow-2xl space-y-2"
-            >
-              <div className="flex items-center justify-between px-5 py-2 mb-2 border-b border-[var(--glass-border)]">
-                <span className="text-[var(--text-secondary)] text-xs font-semibold uppercase tracking-widest">Theme</span>
-                <motion.button
-                  whileTap={{ scale: 0.9 }}
-                  onClick={toggleTheme}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[var(--glass-bg)] text-[var(--accent)]"
-                >
-                  {isDarkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
-                </motion.button>
-              </div>
-
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={i}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-5 py-3.5 rounded-2xl text-base font-medium transition-all duration-200 ${
-                    activeLink === link.label ? "bg-yellow-400/10 text-[var(--accent)] border border-yellow-400/20" : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--glass-bg)]"
-                  }`}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-              <motion.a
-                href="#contact"
-                className="flex items-center justify-center gap-2 mt-4 px-5 py-4 rounded-2xl bg-[var(--accent)] text-black text-sm font-bold uppercase tracking-wider"
-                onClick={() => setIsOpen(false)}
-              >
-                Let's Talk →
-              </motion.a>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </motion.nav>
     </>
   );
