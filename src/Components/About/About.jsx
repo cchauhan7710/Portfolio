@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { assetUrl } from "../../assetUrl";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -11,12 +12,12 @@ const staggerContainer = {
 };
 
 const techStack = [
-  { icon: "/mongodb.svg",    name: "MongoDB",    color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
-  { icon: "/express.svg",    name: "Express.js", color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
-  { icon: "/react.svg",      name: "React.js",   color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
-  { icon: "/node-js.svg",    name: "Node.js",    color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
-  { icon: "/tailwindcss.svg",name: "Tailwind",   color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
-  { icon: "/js.svg",         name: "JavaScript", color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/mongodb.svg"),    name: "MongoDB",    color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/express.svg"),    name: "Express.js", color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/react.svg"),      name: "React.js",   color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/node-js.svg"),    name: "Node.js",    color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/tailwindcss.svg"),name: "Tailwind",   color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
+  { icon: assetUrl("/js.svg"),         name: "JavaScript", color: "from-[var(--accent)]/20 to-transparent border-[var(--accent)]/30" },
 ];
 
 function About() {
@@ -45,7 +46,7 @@ function About() {
             className="relative rounded-full p-1.5 bg-gradient-to-br from-[var(--accent)]/30 to-[var(--bg-primary)] border border-[var(--accent)]/20"
           >
             <img
-              src="/Rahul.jpeg"
+              src={assetUrl("/Rahul.jpeg")}
               alt="Rahul"
               loading="lazy"
               decoding="async"

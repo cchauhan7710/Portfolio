@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { assetUrl } from "../../assetUrl";
 
 export default function ContactCard({ onContactClick }) {
   const email = "rahulchauhaninbox@gmail.com";
@@ -32,7 +33,7 @@ export default function ContactCard({ onContactClick }) {
 
         {/* Profile Picture */}
         <div className="profile-pic">
-          <img src="/Rahul.jpeg" alt="Rahul Chauhan" loading="lazy" decoding="async" />
+          <img src={assetUrl("/Rahul.jpeg")} alt="Rahul Chauhan" loading="lazy" decoding="async" />
         </div>
 
         {/* Bottom Hover Drawer */}

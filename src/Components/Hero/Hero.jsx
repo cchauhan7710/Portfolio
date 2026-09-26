@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Download from "../buttons/Download";
 import HireMe from "../buttons/HireMe";
 import { useTheme } from "../../context/ThemeContext";
+import { assetUrl } from "../../assetUrl";
 import { FiSun, FiMoon } from "react-icons/fi";
 import RubiksCube from "../RubiksCube/RubiksCube";
 
@@ -301,12 +302,12 @@ function Hero() {
                 className="flex flex-wrap gap-2"
               >
                 {[
-                  { name: "MongoDB",    icon: "/mongodb.svg" },
-                  { name: "Express.js", icon: "/express.svg" },
-                  { name: "React.js",   icon: "/react.svg" },
-                  { name: "Node.js",    icon: "/node-js.svg" },
-                  { name: "Tailwind",   icon: "/tailwindcss.svg" },
-                  { name: "JavaScript", icon: "/js.svg" },
+                  { name: "MongoDB",    icon: assetUrl("/mongodb.svg") },
+                  { name: "Express.js", icon: assetUrl("/express.svg") },
+                  { name: "React.js",   icon: assetUrl("/react.svg") },
+                  { name: "Node.js",    icon: assetUrl("/node-js.svg") },
+                  { name: "Tailwind",   icon: assetUrl("/tailwindcss.svg") },
+                  { name: "JavaScript", icon: assetUrl("/js.svg") },
                 ].map((tech, i) => (
                   <motion.span
                     key={i}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { assetUrl } from "../../assetUrl";
 
 const services = [
   {
@@ -10,7 +11,7 @@ const services = [
     glow: "hover:shadow-[0_0_25px_var(--accent-glow)]",
   },
   {
-    icon: "/react.svg",
+    icon: assetUrl("/react.svg"),
     title: "React Frontend",
     desc: "Pixel-perfect, responsive React interfaces with smooth animations and optimized state management.",
     gradient: "from-[var(--accent)]/15 to-transparent",
@@ -18,7 +19,7 @@ const services = [
     glow: "hover:shadow-[0_0_25px_var(--accent-glow)]",
   },
   {
-    icon: "/node-js.svg",
+    icon: assetUrl("/node-js.svg"),
     title: "Node.js Backend",
     desc: "Scalable REST APIs and server-side logic built with Express.js, JWT auth, and best practices.",
     gradient: "from-[var(--accent)]/15 to-transparent",
@@ -26,7 +27,7 @@ const services = [
     glow: "hover:shadow-[0_0_25px_var(--accent-glow)]",
   },
   {
-    icon: "/mongodb.svg",
+    icon: assetUrl("/mongodb.svg"),
     title: "MongoDB Database",
     desc: "Efficient schema design, Mongoose models, indexing, and aggregation pipelines for performance.",
     gradient: "from-[var(--accent)]/15 to-transparent",
@@ -34,7 +35,7 @@ const services = [
     glow: "hover:shadow-[0_0_25px_var(--accent-glow)]",
   },
   {
-    icon: "/express.svg",
+    icon: assetUrl("/express.svg"),
     title: "API Integration",
     desc: "Seamless third-party API integrations — payment gateways, cloud storage, OAuth, and more.",
     gradient: "from-[var(--accent)]/15 to-transparent",
@@ -44,9 +45,9 @@ const services = [
   {
     // Multiple icons for Deployment card
     icons: [
-      { src: "/vercel.svg",  alt: "Vercel",  bg: "bg-white",           label: "Vercel"  },
-      { src: "/render.svg",  alt: "Render",  bg: "bg-slate-700/40",    label: "Render"  },
-      { src: "/git.svg",     alt: "Git",     bg: "bg-yellow-400/10",   label: "Git"     },
+      { src: assetUrl("/vercel.svg"),  alt: "Vercel",  bg: "bg-white",           label: "Vercel"  },
+      { src: assetUrl("/render.svg"),  alt: "Render",  bg: "bg-slate-700/40",    label: "Render"  },
+      { src: assetUrl("/git.svg"),     alt: "Git",     bg: "bg-yellow-400/10",   label: "Git"     },
     ],
     title: "Deployment & DevOps",
     desc: "App deployment on Vercel, Render, and Railway — CI/CD pipelines and environment configuration.",

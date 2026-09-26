@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { assetUrl } from "../../assetUrl";
 
 function Brand() {
   const techIcons = [
-    { name: "MongoDB",    icon: "/mongodb.svg",     bg: "from-[var(--accent)]/30 to-transparent",  border: "border-[var(--accent)]/20",  glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "Express",    icon: "/express.svg",      bg: "from-[var(--accent)]/30 to-transparent",    border: "border-[var(--accent)]/20",   glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "React",      icon: "/react.svg",        bg: "from-[var(--accent)]/30 to-transparent",    border: "border-[var(--accent)]/20",   glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "Node.js",    icon: "/node-js.svg",      bg: "from-[var(--accent)]/30 to-transparent",  border: "border-[var(--accent)]/20",  glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "JavaScript", icon: "/js.svg",           bg: "from-[var(--accent)]/30 to-transparent",border: "border-[var(--accent)]/20", glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "Git",        icon: "/git.svg",          bg: "from-[var(--accent)]/30 to-transparent",border: "border-[var(--accent)]/20", glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
-    { name: "Tailwind",   icon: "/tailwindcss.svg",  bg: "from-[var(--accent)]/30 to-transparent",      border: "border-[var(--accent)]/20",    glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "MongoDB",    icon: assetUrl("/mongodb.svg"),     bg: "from-[var(--accent)]/30 to-transparent",  border: "border-[var(--accent)]/20",  glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "Express",    icon: assetUrl("/express.svg"),      bg: "from-[var(--accent)]/30 to-transparent",    border: "border-[var(--accent)]/20",   glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "React",      icon: assetUrl("/react.svg"),        bg: "from-[var(--accent)]/30 to-transparent",    border: "border-[var(--accent)]/20",   glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "Node.js",    icon: assetUrl("/node-js.svg"),      bg: "from-[var(--accent)]/30 to-transparent",  border: "border-[var(--accent)]/20",  glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "JavaScript", icon: assetUrl("/js.svg"),           bg: "from-[var(--accent)]/30 to-transparent",border: "border-[var(--accent)]/20", glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "Git",        icon: assetUrl("/git.svg"),          bg: "from-[var(--accent)]/30 to-transparent",border: "border-[var(--accent)]/20", glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
+    { name: "Tailwind",   icon: assetUrl("/tailwindcss.svg"),  bg: "from-[var(--accent)]/30 to-transparent",      border: "border-[var(--accent)]/20",    glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
     { name: "Postman",    icon: null, emoji: "🔥",   bg: "from-[var(--accent)]/30 to-transparent",   border: "border-[var(--accent)]/20", glow: "hover:shadow-[0_0_20px_var(--accent-glow)]" },
   ];
 

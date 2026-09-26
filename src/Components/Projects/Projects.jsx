@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BrowserCard from "./BrowserCard";
 import ProjectCard from "./ProjectCard";
+import { assetUrl } from "../../assetUrl";
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     description:
       "AI-powered resume analysis platform that extracts, validates, and scores skills from resumes. Detects fake or unverifiable skills using NLP, and provides detailed audit reports for candidates and recruiters.",
     tags: ["MERN Stack", "NLP", "Python", "REST APIs", "MongoDB"],
-    image: "/skillproof.png",
+    image: assetUrl("/skillproof.png"),
     badge: "AI / Fullstack",
     badgeColor: "from-yellow-400 to-amber-500",
     link: "https://skillproof-frontend.onrender.com",
@@ -25,7 +26,7 @@ const projects = [
     description:
       "Full-stack peer-to-peer campus marketplace platform connecting students for buying and selling textbooks, electronics, and essentials with verified student accounts and dynamic search.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    image: "/campuscart.png",
+    image: assetUrl("/campuscart.png"),
     badge: "E-Commerce",
     badgeColor: "from-purple-500 to-pink-500",
     link: "https://campus-cart-interface.vercel.app/",
@@ -39,7 +40,7 @@ const projects = [
     description:
       "AI-driven ticketing with intelligent auto-assignment, real-time notifications, and smart analytics — designed for high-performance teams.",
     tags: ["React", "Node.js", "Express", "MongoDB", "AI Ticketing"],
-    image: "/samadhan.png",
+    image: assetUrl("/samadhan.png"),
     badge: "AI / Helpdesk",
     badgeColor: "from-blue-500 to-indigo-600",
     link: "https://samadhan-helpdesk-7ztk.onrender.com",
@@ -53,7 +54,7 @@ const projects = [
     description:
       "Premium skincare, haircare, and home care e-commerce platform featuring refined formulas, body wellness curations, and seamless checkout experience.",
     tags: ["React", "E-Commerce", "Tailwind CSS", "Node.js", "Payment Gateway"],
-    image: "/gricora.png",
+    image: assetUrl("/gricora.png"),
     badge: "E-Commerce / Wellness",
     badgeColor: "from-rose-500 to-pink-600",
     link: "https://www.gricora.com/",
