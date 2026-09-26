@@ -21,7 +21,7 @@ const projects = [
   {
     title: "CampusCart",
     subtitle: "Peer-to-Peer Student E-Commerce Marketplace",
-    url: "https://campus-cart-interface.vercel.app/",
+    url: "https://campus-cart-ui.vercel.app",
     description:
       "Full-stack peer-to-peer campus marketplace platform connecting students for buying and selling textbooks, electronics, and essentials with verified student accounts and dynamic search.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
