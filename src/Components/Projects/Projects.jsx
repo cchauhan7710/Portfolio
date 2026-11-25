@@ -29,7 +29,7 @@ const projects = [
     image: assetUrl("/campuscart.png"),
     badge: "E-Commerce",
     badgeColor: "from-purple-500 to-pink-500",
-    link: "https://campus-cart-interface.vercel.app/",
+    link: "https://campus-cart-ui.vercel.app/",
     github: "https://github.com/cchauhan7710/CampusCart",
     isLive: true,
   },
